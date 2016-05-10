@@ -107,7 +107,7 @@ var CommentForm = React.createClass({
       // <form className="commentForm" onSubmit={this.handleSubmit}>
         <Form horizontal className="commentForm" onSubmit={this.handleSubmit}>
         <FormGroup controlId="formHorizontalName">
-          <Col md={6}>
+          <Col md={8}>
             <FormControl
               type="text"
               placeholder="Your name"
@@ -118,9 +118,9 @@ var CommentForm = React.createClass({
         </FormGroup>
 
           <FormGroup controlId="formHorizontalComment">
-            <Col md={6}>
+            <Col md={8}>
               <FormControl
-                type="text"
+                type="textarea"
                 placeholder="Say something..."
                 value={this.state.text}
                 onChange={this.handleTextChange} />
@@ -182,7 +182,7 @@ var LikeButton = React.createClass({
 });
 
 // TODO: change className on the like button, and remove text when that is done
-// TODO: Create the remove feature 
+// TODO: Create the remove feature
 
 ReactDOM.render(
   <CommentBox url="/api/comments" pollInterval={2000} />,
