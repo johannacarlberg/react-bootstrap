@@ -181,6 +181,8 @@ var LikeButton = React.createClass({
   }
 });
 
+// TODO: change className on the like button, and remove text when that is done
+// TODO: Create the remove feature 
 
 ReactDOM.render(
   <CommentBox url="/api/comments" pollInterval={2000} />,
