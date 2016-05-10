@@ -107,7 +107,7 @@ var CommentForm = React.createClass({
       // <form className="commentForm" onSubmit={this.handleSubmit}>
         <Form horizontal className="commentForm" onSubmit={this.handleSubmit}>
         <FormGroup controlId="formHorizontalName">
-          <Col sm={8}>
+          <Col md={6}>
             <FormControl
               type="text"
               placeholder="Your name"
@@ -118,7 +118,7 @@ var CommentForm = React.createClass({
         </FormGroup>
 
           <FormGroup controlId="formHorizontalComment">
-            <Col sm={8}>
+            <Col md={6}>
               <FormControl
                 type="text"
                 placeholder="Say something..."
