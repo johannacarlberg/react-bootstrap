@@ -180,7 +180,7 @@ var LikeButton = React.createClass({
     );
   }
 });
-
+n
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
 
