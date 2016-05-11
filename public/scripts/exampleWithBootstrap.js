@@ -162,9 +162,7 @@ var Comment = React.createClass({
 
 var LikeButton = React.createClass({
   getInitialState: function() {
-    return {
-      liked: false
-    };
+    return {liked: false};
   },
   handleClick: function(event) {
     this.setState({liked: !this.state.liked});
@@ -182,11 +180,14 @@ var LikeButton = React.createClass({
   }
 });
 
+<<<<<<< HEAD
 var btnClass = classNames('btn', this.props.className, {
   'btn-pressed': this.state.isPressed,
   'btn-over': !this.state.isPressed && this.state.isHovered
 });
 
+=======
+>>>>>>> parent of cf97b60... adding classnames npm
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
 
