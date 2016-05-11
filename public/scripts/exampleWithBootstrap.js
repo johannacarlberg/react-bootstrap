@@ -161,7 +161,9 @@ var Comment = React.createClass({
 
 var LikeButton = React.createClass({
   getInitialState: function() {
-    return {liked: false};
+    return {
+      liked: false
+    };
   },
   handleClick: function(event) {
     this.setState({liked: !this.state.liked});
@@ -178,7 +180,7 @@ var LikeButton = React.createClass({
     );
   }
 });
-
+n
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
 
