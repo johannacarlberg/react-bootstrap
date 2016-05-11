@@ -11,7 +11,6 @@ var ListGroupItem = ReactBootstrap.ListGroupItem;
 var Alert = ReactBootstrap.Alert;
 var Glyphicon = ReactBootstrap.Glyphicon;
 
-
 var CommentBox = React.createClass({
   loadCommentsFromServer: function(){
     $.ajax({
@@ -180,11 +179,6 @@ var LikeButton = React.createClass({
       </p>
     );
   }
-});
-
-var btnClass = classNames('btn', this.props.className, {
-  'btn-pressed': this.state.isPressed,
-  'btn-over': !this.state.isPressed && this.state.isHovered
 });
 
 // TODO: change className on the like button, and remove text when that is done
