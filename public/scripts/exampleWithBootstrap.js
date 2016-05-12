@@ -103,7 +103,6 @@ var CommentForm = React.createClass({
   },
   render: function(){
     return (
-      // <form className="commentForm" onSubmit={this.handleSubmit}>
         <Form horizontal className="commentForm" onSubmit={this.handleSubmit}>
         <FormGroup controlId="formHorizontalName">
           <Col md={8}>
@@ -182,10 +181,6 @@ var LikeButton = React.createClass({
   }
 });
 
-var btnClass = classNames('btn', this.props.className, {
-  'btn-pressed': this.state.isPressed,
-  'btn-over': !this.state.isPressed && this.state.isHovered
-});
 
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
