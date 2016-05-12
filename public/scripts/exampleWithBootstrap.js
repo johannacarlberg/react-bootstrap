@@ -11,7 +11,6 @@ var ListGroupItem = ReactBootstrap.ListGroupItem;
 var Alert = ReactBootstrap.Alert;
 var Glyphicon = ReactBootstrap.Glyphicon;
 
-
 var CommentBox = React.createClass({
   loadCommentsFromServer: function(){
     $.ajax({
@@ -161,9 +160,7 @@ var Comment = React.createClass({
 
 var LikeButton = React.createClass({
   getInitialState: function() {
-    return {
-      liked: false
-    };
+    return {liked: false};
   },
   handleClick: function(event) {
     this.setState({liked: !this.state.liked});
@@ -180,7 +177,6 @@ var LikeButton = React.createClass({
     );
   }
 });
-
 
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
