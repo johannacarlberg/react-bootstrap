@@ -159,7 +159,7 @@ var Comment = React.createClass({
               {this.props.author}
             </strong>
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
-            <Button onClick={this.handleClick} > REMOVE </Button>
+            <Button bsStyle="danger" onClick={this.handleClick} > REMOVE </Button>
             <LikeButton></LikeButton>
 
           </ListGroupItem>
