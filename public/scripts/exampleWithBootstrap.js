@@ -167,12 +167,12 @@ var LikeButton = React.createClass({
   },
   render: function() {
     var text = this.state.liked ? 'like' : 'haven\'t liked';
-    var className = this.state.liked ? 'danger' : '';
+    var className = this.state.liked ? 'red' : '';
     return (
       <p onClick={this.handleClick}>
         You {text} this
-        <Button bsStyle={className}>
-          <Glyphicon glyph="heart"/>
+        <Button>
+          <Glyphicon glyph="heart" className={className}/>
         </Button>
       </p>
     );
