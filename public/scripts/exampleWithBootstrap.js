@@ -145,11 +145,10 @@ var Comment = React.createClass({
             <strong>
               {this.props.author}
             </strong>
-            <Button className="pull-right">
-              <Glyphicon glyph="trash" />
-            </Button>
+            <RemoveButton></RemoveButton>
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
             <LikeButton></LikeButton>
+
           </ListGroupItem>
       </div>
       </ListGroup>
@@ -169,12 +168,33 @@ var LikeButton = React.createClass({
     // var text = this.state.liked ? 'like' : 'haven\'t liked';
     var className = this.state.liked ? 'red' : '';
     return (
-        <Button onClick={this.handleClick}>
+        <p onClick={this.handleClick}>
           <Glyphicon glyph="heart" className={className}/>
-        </Button>
+        </p>
     );
   }
 });
+
+var RemoveButton = React.createClass({
+  getInitialState: function() {
+    return {liked: false};
+  },
+  handleClick: function(event) {
+    // Alert('hello ')
+    this.setState({liked: !this.state.liked});
+  },
+  render: function() {
+    // var text = this.state.liked ? 'like' : 'haven\'t liked';
+    var className = this.state.liked ? 'red' : '';
+    return (
+      <Button onClick={this.handleClick} className="pull-right">
+        <Glyphicon glyph="trash" />
+      </Button>
+    );
+  }
+});
+
+
 
 // TODO: change className on the like button, and remove text when that is done
 // TODO: Create the remove feature
@@ -183,3 +203,4 @@ ReactDOM.render(
   <CommentBox url="/api/comments" pollInterval={2000} />,
   document.getElementById('content')
 );
+
