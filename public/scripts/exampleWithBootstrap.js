@@ -137,6 +137,19 @@ var Comment = React.createClass({
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
     return {__html: rawMarkup};
   },
+  // handleClick: function(e) {
+  //   console.log(e.target);
+  //   console.log(this.props.author)
+  //   console.log(this.id)
+  //   console.log(this.rawMarkup)
+  //   console.log(e.target.value);
+  //   var commentIndex = parseInt(e.target.value, 10);
+  //   console.log('remove task: %d', taskIndex, this.state.items[taskIndex]);
+  //   this.setState(state => {
+  //     state.items.splice(taskIndex, 1);
+  //     return {items: state.items};
+  //   });
+  // },
   render: function(){
     return(
       <ListGroup>
@@ -145,14 +158,13 @@ var Comment = React.createClass({
             <strong>
               {this.props.author}
             </strong>
-            <RemoveButton></RemoveButton>
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
+            <Button onClick={this.handleClick} > REMOVE </Button>
             <LikeButton></LikeButton>
 
           </ListGroupItem>
       </div>
       </ListGroup>
-
     )
   }
 });
@@ -175,30 +187,33 @@ var LikeButton = React.createClass({
   }
 });
 
-var RemoveButton = React.createClass({
-  // getInitialState: function() {
-  //   return {removed: false}
-  // },
-  handleClick: function(e) {
-    console.log(e.target);
-    console.log(e.target.value);
-    var taskIndex = parseInt(e.target.value, 10);
-    console.log('remove task: %d', taskIndex, this.state.items[taskIndex]);
-    this.setState(state => {
-      state.items.splice(taskIndex, 1);
-      return {items: state.items};
-    });
-  },
-  render: function() {
-    // var text = this.state.liked ? 'like' : 'haven\'t liked';
-    // var className = this.state.liked ? 'red' : '';
-    return (
-      <Button onClick={this.handleClick} className="pull-right" value={1}>
-        <Glyphicon glyph="trash"/>
-      </Button>
-    );
-  }
-});
+// var RemoveButton = React.createClass({
+//   getInitialState: function(){
+//     return  {
+//       data: []
+//     }
+//   },
+//   handleClick: function(e) {
+//     console.log(e.target);
+//     console.log(this.state.data)
+//     console.log(e.target.value);
+//     var taskIndex = parseInt(e.target.value, 10);
+//     console.log('remove task: %d', taskIndex, this.state.items[taskIndex]);
+//     this.setState(state => {
+//       state.items.splice(taskIndex, 1);
+//       return {items: state.items};
+//     });
+//   },
+//   render: function() {
+//     // var text = this.state.liked ? 'like' : 'haven\'t liked';
+//     // var className = this.state.liked ? 'red' : '';
+//     return (
+//       <Button onClick={this.handleClick} className="pull-right" value={1}>
+//         <Glyphicon glyph="trash"/>
+//       </Button>
+//     );
+//   }
+// });
 
 
 
